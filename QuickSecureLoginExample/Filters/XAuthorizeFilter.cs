@@ -47,7 +47,16 @@ namespace QuickSecureLoginExample.Filters
             if (AuthCookie == null)
                 return false;
 
-            FormsAuthenticationTicket Auth = FormsAuthentication.Decrypt(AuthCookie.Value);
+            FormsAuthenticationTicket Auth;
+
+            try
+            {
+                Auth = FormsAuthentication.Decrypt(AuthCookie.Value);
+            }
+            catch
+            {
+                return false;
+            }
 
             if (!Auth.Expired)
                 return true;
