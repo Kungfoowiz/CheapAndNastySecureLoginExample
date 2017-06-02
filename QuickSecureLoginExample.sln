@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSecureLoginExample", "QuickSecureLoginExample\QuickSecureLoginExample.csproj", "{0436D594-8B39-482E-8D32-8E7C8357C9E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSecureLoginExample.Tests", "QuickSecureLoginExample.Tests\QuickSecureLoginExample.Tests.csproj", "{7E71A66A-9C7A-45A2-B4DD-C8787995BF6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0436D594-8B39-482E-8D32-8E7C8357C9E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0436D594-8B39-482E-8D32-8E7C8357C9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0436D594-8B39-482E-8D32-8E7C8357C9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0436D594-8B39-482E-8D32-8E7C8357C9E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E71A66A-9C7A-45A2-B4DD-C8787995BF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E71A66A-9C7A-45A2-B4DD-C8787995BF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E71A66A-9C7A-45A2-B4DD-C8787995BF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E71A66A-9C7A-45A2-B4DD-C8787995BF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
