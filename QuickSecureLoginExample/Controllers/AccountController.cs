@@ -64,9 +64,8 @@ namespace QuickSecureLoginExample.Controllers
         /// GET: /Account/Login
         /// 
         [AllowAnonymous]
-        public ActionResult Login(string ReturnUrl)
+        public ActionResult Login()
         {
-            ViewBag.ReturnUrl = ReturnUrl;
             return View();
         }
 
@@ -75,7 +74,7 @@ namespace QuickSecureLoginExample.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(MyLoginModel LoginModel, string ReturnUrl)
+        public ActionResult Login(MyLoginModel LoginModel)
         {
             if (ModelState.IsValid)
             {
@@ -85,8 +84,8 @@ namespace QuickSecureLoginExample.Controllers
                 if (Authenticated)
                 {
                     FormsAuthentication.SetAuthCookie(LoginModel.User, true);
+                    FormsAuthentication.RedirectFromLoginPage(LoginModel.User, true);
                     // return RedirectToAction("Index", "Secure");
-                    return Redirect(ReturnUrl); 
                 }
             }
 

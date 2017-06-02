@@ -13,6 +13,13 @@ namespace QuickSecureLoginExample
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapRoute(
+               name: "ASPX",
+               url: "{PageName}.aspx",
+               defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+             );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
