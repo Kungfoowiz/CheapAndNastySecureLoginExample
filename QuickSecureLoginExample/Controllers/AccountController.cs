@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 
 
-
+using QuickSecureLoginExample.Filters; 
 using QuickSecureLoginExample.Models; 
 
 
@@ -92,6 +92,25 @@ namespace QuickSecureLoginExample.Controllers
 
             ModelState.AddModelError("", "Please try again");
             return View(LoginModel);
+
+        }
+
+
+
+
+
+        /// GET: /Account/Logoff
+        /// 
+        [XAuthorize]
+        [HttpGet] 
+        public ActionResult Logoff()
+        {
+
+
+            FormsAuthentication.SignOut();
+
+            //return View("Account/LoggedOff"); 
+            return View("LoggedOff");
 
         }
 

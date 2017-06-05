@@ -1,0 +1,24 @@
+﻿
+<div id="LoginDetails">
+
+    @{
+
+        if( User.Identity.IsAuthenticated )
+        { 
+
+            <p>
+
+                <span>Hello @User.Identity.Name</span>
+
+                <span>
+                    @Html.ActionLink("Log off", "Logoff", "Account", null, null)
+                </span>
+
+            </p>
+
+        }
+
+
+    }
+
+</div>

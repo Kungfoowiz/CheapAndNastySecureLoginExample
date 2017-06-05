@@ -4,6 +4,12 @@ using System.Linq;
 using System.Web;
 
 
+
+using System.Web.Security; 
+
+
+
+
 using System.ComponentModel.DataAnnotations;
 
 namespace QuickSecureLoginExample.Models
@@ -22,6 +28,10 @@ namespace QuickSecureLoginExample.Models
         public string Pass { get; set; }
 
     }
+
+
+
+
 
 
 }
